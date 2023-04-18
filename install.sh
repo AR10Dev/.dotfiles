@@ -9,7 +9,7 @@
 #==============
 # Variables
 #==============
-dotfiles_dir=~/.dotfiles
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 #==============
 # Delete existing dot files and folders
@@ -20,8 +20,8 @@ rm -rf ~/.config > /dev/null 2>&1
 #==============
 # Create symlinks in the home folder
 #==============
-ln -sf $dotfiles_dir/zsh/zshrc ~/.zshrc
-ln -sf $dotfiles_dir/.config ~/.config
+ln -sf $SCRIPTPATH/zsh/zshrc ~/.zshrc
+ln -sf $SCRIPTPATH/.config ~/.config
 
 #==============
 # Set zsh as the default shell
