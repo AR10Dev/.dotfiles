@@ -13,7 +13,7 @@ sudo rm -rf ~/.config > /dev/null 2>&1
 #==============
 # Create symlinks in the home folder
 #==============
-ln -sf $SCRIPTPATH/zsh/zshrc ~/.zshrc
+ln -sf $SCRIPTPATH/zsh/.zshrc ~/.zshrc
 ln -sf $SCRIPTPATH/.config ~/.config
 
 #==============
