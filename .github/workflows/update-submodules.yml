@@ -1,0 +1,41 @@
+name: Update Submodules and Create PR
+
+on:
+  schedule:
+    - cron: '0 0 * * *'             # This schedules the workflow to run daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive       # Check out submodules
+
+    - name: Update Submodules
+      id: update-submodules
+      run: |
+        git submodule update --remote
+        if [ -n "$(git status --porcelain)" ]; then
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update submodules"
+          echo "::set-output name=changed::true"
+        else
+          echo "No changes in submodules."
+          echo "::set-output name=changed::false"
+
+    - name: Push changes and create PR
+      if: steps.update-submodules.outputs.changed == 'true'
+      uses: peter-evans/create-pull-request@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: Update submodules
+        branch: update-submodules
+        title: Update submodules
+        body: Automated update of submodules.
+        labels: update, submodules
