@@ -2,9 +2,8 @@ name: Update Submodules and Create PR
 
 on:
   schedule:
-    - cron: '0 0 * * *'             # This schedules the workflow to run daily at midnight UTC
-  workflow_dispatch:
-
+    - cron: '0 0 * * *'     # This schedules the workflow to run daily at midnight UTC
+  workflow_dispatch:        
 jobs:
   update-submodules:
     runs-on: ubuntu-latest
@@ -13,7 +12,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
       with:
-        submodules: recursive       # Check out submodules
+        submodules: recursive
 
     - name: Update Submodules
       id: update-submodules
@@ -24,13 +23,14 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Update submodules"
-          echo "::set-output name=changed::true"
+          echo "changed=true" >> $GITHUB_ENV
         else
           echo "No changes in submodules."
-          echo "::set-output name=changed::false"
+          echo "changed=false" >> $GITHUB_ENV
+        fi
 
     - name: Push changes and create PR
-      if: steps.update-submodules.outputs.changed == 'true'
+      if: env.changed == 'true'
       uses: peter-evans/create-pull-request@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
