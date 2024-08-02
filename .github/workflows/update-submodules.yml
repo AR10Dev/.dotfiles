@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '0 0 * * *'     # This schedules the workflow to run daily at midnight UTC
   workflow_dispatch:
-  push:
-    branches:
-      - update-submodules
 
 jobs:
   update-submodules:
@@ -16,6 +13,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
       with:
+        ref: update-submodules
         submodules: recursive
 
     - name: Update Submodules
@@ -37,7 +35,7 @@ jobs:
       if: env.changed == 'true'
       uses: peter-evans/create-pull-request@v6
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.PAT }}
         commit-message: Update submodules
         branch: update-submodules
         title: Update submodules
