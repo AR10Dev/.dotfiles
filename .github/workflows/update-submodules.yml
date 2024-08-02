@@ -13,7 +13,6 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
       with:
-        ref: update-submodules
         submodules: recursive
 
     - name: Update Submodules
@@ -37,7 +36,8 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: Update submodules
-        branch: update-submodules
+#        branch: update-submodules
         title: Update submodules
         body: Automated update of submodules.
         labels: submodules
+        base: ${{ github.ref }}
