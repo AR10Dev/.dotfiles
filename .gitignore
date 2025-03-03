@@ -1,0 +1,19 @@
+# Ignore backup files
+*~
+*.bak
+*.backup
+
+# Ignore logs
+*.log
+
+# Ignore local configurations
+.env
+.env.local
+
+# Ignore specific hidden files
+.DS_Store
+.netrwhist
+
+# Ignore vim swap files
+*.swp
+*.swo
