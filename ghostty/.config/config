@@ -1,0 +1,7 @@
+theme = catppuccin-mocha
+# font-family = Meslo LGS Nerd Font Mono
+# font-family = CaskaydiaMono Nerd Font
+font-family = CaskaydiaCove Nerd Font
+# font-size = 16
+background-opacity = 0.95
+gtk-titlebar = false
