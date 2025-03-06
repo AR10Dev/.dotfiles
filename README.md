@@ -7,6 +7,7 @@ This repository contains my personal dotfiles for various terminal applications 
 - 🐱 **kitty**: Terminal emulator configuration with Catppuccin Mocha theme
 - 👻 **ghostty**: Alternative terminal emulator settings
 - 🚀 **starship**: Cross-shell customizable prompt with colorful segments
+- 🎨 **ohmyposh**: Prompt theme engine with customizable segments and icons
 - 📟 **tmux**: Terminal multiplexer with custom key bindings and settings
 - 🐚 **zsh**: Z shell configuration with zinit plugin manager
 - 🔄 **git**: Global gitignore rules
@@ -33,6 +34,9 @@ This repository contains my personal dotfiles for various terminal applications 
 
     # For kitty
     stow kitty
+    
+    # For ohmyposh
+    stow ohmyposh
 
     # For all configurations
     stow */
