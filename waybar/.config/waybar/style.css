@@ -1,0 +1,158 @@
+/* General */
+* {
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    border: none;
+    color: #cdd6f4; /* Lavender */
+    font-family: CaskaydiaCove Nerd Font;
+    font-weight: Bold;
+    letter-spacing: 0.5px;
+    background: transparent;
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease;
+}
+
+/* Module Groups */
+/* .modules-left {
+    background-color: rgba(17, 17, 27, 0.85);
+} */
+
+.modules-center {
+    background-color: rgba(30, 30, 46, 0.85); /* Surface 0 */
+    color: #a6e3a1; /* Green */
+    margin: 10px 0 0 10px;
+    padding: 5px 10px;
+}
+
+.modules-right {
+    background-color: rgba(30, 30, 46, 0.85);
+    margin: 10px 10px 0 10px;
+    padding: 0 10px;
+}
+
+/* Individual Modules */
+#workspaces {
+    color: #cdd6f4; /* Lavender */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+#workspaces button {
+    border-radius: 10px;
+    min-width: 30px;
+    color: #89b4fa; /* Blue */
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    /* text-shadow: none; */
+    /* box-shadow: none; */
+}
+
+#workspaces button.active {
+    background-color: rgba(210, 137, 242, 0.85); /* Mauve */
+    border-radius: 10px;
+    min-width: 40px;
+    color: #1e1e2e; /* Black */
+}
+
+#custom-weather {
+    background-color: rgba(30, 30, 46, 0.85);
+    color: #89b4fa; /* Blue */
+    margin: 10px 0 0 10px;
+    padding: 0 15px;
+}
+
+#custom-pacman {
+    background-color: rgba(30, 30, 46, 0.85);
+    color: #f5e0dc; /* Rosewater */
+    margin: 10px 0 0 10px;
+    padding: 0 10px;
+}
+
+#tray {
+    background-color: rgba(30, 30, 46, 0.85);
+    color: #f2cdcd; /* Flamingo */
+    margin: 10px 0 0 10px;
+    padding: 0 10px;
+}
+
+#mpris {
+    background-color: rgba(30, 30, 46, 0.85);
+    color: #eba0ac; /* Maroon */
+    margin: 10px 0 0 10px;
+    padding: 0 15px;
+    min-width: 310px;
+}
+
+#network.speeddown {
+    color: #a6e3a1; /* Green */
+    min-width: 72px;
+    padding: 0 5px;
+}
+
+#network.speedup {
+    color: #f38ba8; /* Red */
+    min-width: 72px;
+    padding: 0 5px;
+}
+
+#cpu {
+    color: #fab387; /* Peach */
+    min-width: 50px;
+    padding: 0 5px;
+}
+
+#network {
+    color: #89b4fa; /* Blue */
+    min-width: 30px;
+    padding: 0 5px;
+}
+
+#networkSpeed {
+    color: #f2cdcd; /* Flamingo */
+    min-width: 50px;
+    padding: 0 5px;
+}
+
+#memory {
+    color: #cba6f7; /* Mauve */
+    min-width: 30px;
+    padding: 0 5px;
+}
+
+#temperature {
+    color: #eba0ac; /* Maroon */
+    min-width: 30px;
+    padding: 0 5px;
+}
+
+#battery {
+    color: #f5e0dc; /* Rosewater */
+    min-width: 50px;
+    padding: 0 5px;
+}
+
+#backlight {
+    color: #bac2de; /* Subtext 1 */
+    min-width: 50px;
+    padding: 0 5px;
+}
+
+#pulseaudio {
+    color: #a6e3a1; /* Green */
+    min-width: 50px;
+    padding: 0 5px;
+}
+
+#clock {
+    color: #f5c2e7; /* Pink */
+    padding: 0 6px;
+}

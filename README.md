@@ -10,7 +10,7 @@ This repository contains my personal dotfiles for various terminal applications 
 - 🎨 **ohmyposh**: Prompt theme engine with customizable segments and icons
 - 📟 **tmux**: Terminal multiplexer with custom key bindings and settings
 - 🐚 **zsh**: Z shell configuration with zinit plugin manager
-- 🔄 **git**: Global gitignore rules
+- 📊 **waybar**: Highly customizable Wayland status bar
 
 ## 🔧 Requirements
 
