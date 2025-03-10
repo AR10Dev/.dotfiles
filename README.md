@@ -11,6 +11,7 @@ This repository contains my personal dotfiles for various terminal applications 
 - 📟 **tmux**: Terminal multiplexer with custom key bindings and settings
 - 🐚 **zsh**: Z shell configuration with zinit plugin manager
 - 📊 **waybar**: Highly customizable Wayland status bar
+- 🔔 **dunst**: Lightweight notification daemon with customizable appearance
 
 ## 🔧 Requirements
 
